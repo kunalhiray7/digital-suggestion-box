@@ -1,8 +1,8 @@
 import React from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import LeftNav from "../layout/leftNav";
+import DashboardTabs from "./dashboardTabs";
 
 const drawerWidth = 240;
 
@@ -94,18 +94,7 @@ class Dashboard extends React.Component {
                 <LeftNav/>
                 <main className={classes.content}>
                     <div className={classes.appBarSpacer} />
-                    <Typography variant="h4" gutterBottom component="h2">
-                        Orders
-                    </Typography>
-                    <Typography component="div" className={classes.chartContainer}>
-                        <div>CHART 1</div>
-                    </Typography>
-                    <Typography variant="h4" gutterBottom component="h2">
-                        Products
-                    </Typography>
-                    <div className={classes.tableContainer}>
-                        <div>CHART 2</div>
-                    </div>
+                    <DashboardTabs/>
                 </main>
             </div>
         );
