@@ -3,6 +3,9 @@ import {withStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LeftNav from "../layout/leftNav";
 import DashboardTabs from "./dashboardTabs";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from '@material-ui/icons/Add';
+import SuggestionForm from "../suggestions/suggestionForm";
 
 const drawerWidth = 240;
 
@@ -81,9 +84,28 @@ const styles = theme => ({
     h5: {
         marginBottom: theme.spacing.unit * 2,
     },
+    fab: {
+        position: 'absolute',
+        bottom: theme.spacing.unit * 2,
+        right: theme.spacing.unit * 2,
+    },
 });
 
 class Dashboard extends React.Component {
+
+    state = {
+        open: false,
+    };
+
+    handleClickOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+
+
 
     render() {
         const { classes } = this.props;
@@ -95,7 +117,13 @@ class Dashboard extends React.Component {
                 <main className={classes.content}>
                     <div className={classes.appBarSpacer} />
                     <DashboardTabs/>
+                    <Fab color="primary" aria-label="Add" className={classes.fab} onClick={this.handleClickOpen}>
+                        <AddIcon />
+                    </Fab>
                 </main>
+
+                <SuggestionForm open={this.state.open} handleClose={this.handleClose}
+                                addSuggestion={this.props.addSuggestion} users={this.props.users}/>
             </div>
         );
     }
