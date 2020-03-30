@@ -9,11 +9,17 @@
     "classnames": "latest",
     "gh-pages": "^2.0.1",
     "prop-types": "latest",
+    "ramda": "^0.26.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8",
-    "typeface-roboto": "^0.0.54"
+    "typeface-roboto": "^0.0.54",
+    "axios": "^0.19.0",
+    "json-server": "^0.16.1",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "mock:api": "json-server --watch api/db.json --port 8000"
   },
   "eslintConfig": {
     "extends": "react-app"

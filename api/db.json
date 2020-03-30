@@ -1,0 +1,50 @@
+{
+  "authentications": [
+    {
+      "username": "json.smith@gmail.com",
+      "password": "json@123",
+      "role": "USER",
+      "name": "Json Smith",
+      "id": 3
+    },
+    {
+      "username": "john.smith@gmail.com",
+      "password": "john@123",
+      "role": "ADMIN",
+      "name": "John Smith",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Marcus Rashford",
+      "email": "marcus@gmail.com",
+      "organizationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Paul Pogba",
+      "email": "paul@gmail.com",
+      "organizationId": 1
+    },
+    {
+      "id": 3,
+      "name": "Anthony Martial",
+      "email": "anthony@gmail.com",
+      "organizationId": 1
+    },
+    {
+      "id": 4,
+      "name": "Bruno Fernandes",
+      "email": "bruno@gmail.com",
+      "organizationId": 1
+    },
+    {
+      "id": 5,
+      "name": "Daniel James",
+      "email": "daniel@gmail.com",
+      "organizationId": 1
+    }
+  ]
+}

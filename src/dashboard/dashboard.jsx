@@ -97,6 +97,10 @@ class Dashboard extends React.Component {
         open: false,
     };
 
+    componentDidMount() {
+        this.props.fetchUsers();
+    }
+
     handleClickOpen = () => {
         this.setState({ open: true });
     };
